@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Cart - Ana's</title>
+    <link rel="website icon" type="png" href="img/logo.png">
+    <link rel="stylesheet" href="footer.css">
+</head>
+
+<body>
+
+    <section id="header">
+        <a herf="#"><img src="img/logosmall.png" class="logo" id="logo"></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a class="active" href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+            </ul>
+        </div>
+        <div id="mobile">
+            <i id="bar" class="fas fa-outdent"></i>
+            <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+        </div>
+    </section>
+
+    <section id="page-header" class="about-header">
+        <h2>Your Shopping Bag</h2>
+        <p>Review your items and update quantities before checkout.</p>
+    </section>
+
+    <section id="cart" class="section-p1">
+        <div class="cart-table-wrap">
+        <table width="100%">
+            <thead>
+                <tr>
+                    <td>REMOVE</td>
+                    <td>IMAGE</td>
+                    <td>PRODUCT</td>
+                    <td>PRICE</td>
+                    <td>QUANTITY</td>
+                    <td>SUBTOTAL</td>
+                </tr>
+            </thead>
+            <tbody id="cart-table-body">
+                </tbody>
+        </table>
+        </div>
+    </section>
+
+    <section id="cart-add" class="section-p1">
+        <div id="subtotal">
+            <div class="cart-summary-heading">
+                <div><span class="summary-eyebrow">ORDER SUMMARY</span><h3>Cart totals</h3></div>
+                <i class="fa-solid fa-receipt" aria-hidden="true"></i>
+            </div>
+            <table>
+                <tr><td>Subtotal</td><td id="cart-subtotal">₹0.00</td></tr>
+                <tr><td>Shipping</td><td><span class="free-shipping">FREE</span></td></tr>
+                <tr><td><strong>Total</strong></td><td><strong id="cart-total">₹0.00</strong></td></tr>
+            </table>
+            <p class="checkout-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Demo checkout only. No payment will be collected.</p>
+            <button id="checkout-button" class="normal" type="button">Proceed to checkout <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+            <a class="continue-shopping" href="shop.html"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Continue shopping</a>
+        </div>
+    </section>
+    <footer class="site-footer">
+    <div class="footer-inner">
+        <div class="footer-main">
+            <div class="footer-brand">
+                <a href="index.html" aria-label="Ana's home"><img src="img/logosmall.png" alt="Ana's"></a>
+                <p>Thoughtful styles for everyday wear, with a personal touch from Ana's.</p>
+            </div>
+            <nav class="footer-links" aria-label="Footer navigation">
+                <h2>Explore</h2>
+                <a href="shop.html">Shop</a>
+                <a href="about.html">About us</a>
+                <a href="blog.html">Journal</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="footer-contact">
+                <h2>Visit or get in touch</h2>
+                <p>R.R. School Road, M.S. Nagar<br>Kurnool, 518002</p>
+                <p>Phone: +91 891666****</p>
+                <p>Mon–Sat, 10:30 am–8:30 pm IST</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2026 Ana's. All rights reserved.</span>
+            <a href="contact.html">Questions? Contact us</a>
+        </div>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

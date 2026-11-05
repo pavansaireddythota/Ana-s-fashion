@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Demo checkout for Ana's storefront. UPI payment integration is under development.">
+    <title>Demo Checkout - Ana's</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="payment.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+<body>
+    <section id="header">
+        <a href="index.html"><img src="img/logosmall.png" class="logo" id="logo" alt="Ana's"></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a class="active" href="cart.html" aria-label="Shopping cart"><i class="fa-solid fa-bag-shopping"></i></a></li>
+            </ul>
+        </div>
+        <div id="mobile">
+            <i id="bar" class="fas fa-outdent" aria-label="Open navigation"></i>
+            <a href="cart.html" aria-label="View cart"><i class="fa-solid fa-bag-shopping"></i></a>
+        </div>
+    </section>
+
+    <main class="payment-page">
+        <div class="payment-heading">
+            <a class="payment-back" href="cart.html"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to cart</a>
+            <span class="payment-kicker">CHECKOUT</span>
+            <h1>Choose how to pay</h1>
+            <p>Review your order and select a payment method for this checkout demo.</p>
+        </div>
+
+        <div class="payment-layout">
+            <section class="payment-panel" aria-labelledby="payment-method-heading">
+                <div class="payment-panel-heading">
+                    <div><span class="payment-step">PAYMENT METHOD</span><h2 id="payment-method-heading">UPI payment</h2></div>
+                    <i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i>
+                </div>
+
+                <form id="payment-demo-form">
+                    <label class="payment-option">
+                        <input type="radio" name="payment-method" value="bhim" checked>
+                        <span class="payment-radio" aria-hidden="true"></span>
+                        <span class="payment-option-copy"><strong>BHIM / UPI</strong><small>Demo option · integration under development</small></span>
+                        <span class="upi-mark" aria-hidden="true">UPI</span>
+                    </label>
+                    <label class="payment-option">
+                        <input type="radio" name="payment-method" value="other">
+                        <span class="payment-radio" aria-hidden="true"></span>
+                        <span class="payment-option-copy"><strong>Other UPI app</strong><small>Demo option · no app will be opened</small></span>
+                        <i class="fa-solid fa-qrcode payment-option-icon" aria-hidden="true"></i>
+                    </label>
+
+                    <div class="payment-demo-notice">
+                        <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                        <p><strong>Payment demo only</strong><br>This checkout is not connected to NPCI, BHIM, a bank, or a payment gateway. Do not enter a UPI PIN or payment credentials. No money will be moved.</p>
+                    </div>
+
+                    <button class="payment-submit" id="payment-demo-button" type="submit">Continue with demo <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+                    <p id="payment-status" class="payment-status" role="status" aria-live="polite">UPI payment is under development. Continuing will only display a demo message.</p>
+                </form>
+            </section>
+
+            <aside class="payment-summary" aria-labelledby="order-summary-heading">
+                <span class="payment-step">YOUR ORDER</span>
+                <h2 id="order-summary-heading">Order summary</h2>
+                <div class="payment-summary-row"><span>Items</span><strong id="payment-item-count">0 items</strong></div>
+                <div class="payment-summary-row"><span>Shipping</span><strong class="payment-free">Free</strong></div>
+                <div class="payment-summary-total"><span>Total due</span><strong id="payment-total">₹0.00</strong></div>
+                <a class="payment-edit-cart" href="cart.html">Review your cart</a>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a href="index.html" aria-label="Ana's home"><img src="img/logosmall.png" alt="Ana's"></a>
+                    <p>Thoughtful styles for everyday wear, with a personal touch from Ana's.</p>
+                </div>
+                <nav class="footer-links" aria-label="Footer navigation">
+                    <h2>Explore</h2>
+                    <a href="shop.html">Shop</a>
+                    <a href="about.html">About us</a>
+                    <a href="blog.html">Journal</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+                <div class="footer-contact">
+                    <h2>Visit or get in touch</h2>
+                    <p>R.R. School Road, M.S. Nagar<br>Kurnool, 518002</p>
+                    <p>Phone: +91 891666****</p>
+                    <p>Mon–Sat, 10:30 am–8:30 pm IST</p>
+                </div>
+            </div>
+            <div class="footer-bottom"><span>&copy; 2026 Ana's. All rights reserved.</span><a href="contact.html">Questions? Contact us</a></div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

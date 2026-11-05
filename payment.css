@@ -1,0 +1,67 @@
+.payment-page {
+    width: min(1120px, 100%);
+    margin: 0 auto;
+    padding: 48px 40px 76px;
+}
+
+.payment-heading { margin-bottom: 30px; }
+.payment-back { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 28px; color: #465b52; font-size: 13px; font-weight: 600; text-decoration: none; }
+.payment-back:hover, .payment-edit-cart:hover { color: #088178; }
+.payment-kicker, .payment-step { color: #088178; font-size: 11px; font-weight: 700; letter-spacing: .12em; }
+.payment-heading h1 { margin-top: 8px; font-size: 36px; line-height: 1.2; }
+.payment-heading p { margin: 9px 0 0; color: #465b52; }
+
+.payment-layout { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(270px, .8fr); align-items: start; gap: 26px; }
+.payment-panel, .payment-summary { border: 1px solid #cce7d0; border-radius: 10px; background: #fff; }
+.payment-panel { padding: 28px; }
+.payment-summary { padding: 25px; }
+.payment-panel-heading { display: flex; align-items: center; justify-content: space-between; margin-bottom: 22px; }
+.payment-panel-heading h2, .payment-summary h2 { margin-top: 6px; color: #1a1a1a; font-size: 21px; }
+.payment-panel-heading > i { display: grid; width: 42px; height: 42px; place-items: center; border-radius: 50%; background: #eaf4ee; color: #088178; }
+
+.payment-option { display: flex; align-items: center; gap: 13px; margin-bottom: 12px; padding: 16px; border: 1px solid #d9e2dc; border-radius: 8px; cursor: pointer; }
+.payment-option:has(input:checked) { border-color: #088178; box-shadow: inset 0 0 0 1px #088178; }
+.payment-option input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.payment-radio { display: grid; width: 18px; height: 18px; flex: 0 0 18px; place-items: center; border: 1px solid #9aa9a1; border-radius: 50%; }
+.payment-option input:checked + .payment-radio { border: 5px solid #088178; }
+.payment-option input:focus-visible + .payment-radio { outline: 2px solid #1a1a1a; outline-offset: 3px; }
+.payment-option-copy { display: flex; flex: 1; flex-direction: column; gap: 4px; }
+.payment-option-copy strong { color: #1a1a1a; font-size: 14px; }
+.payment-option-copy small { color: #465b52; font-size: 12px; }
+.upi-mark { color: #088178; font-size: 13px; font-weight: 800; letter-spacing: .06em; }
+.payment-option-icon { color: #088178; font-size: 18px; }
+
+.payment-demo-notice { display: flex; align-items: flex-start; gap: 12px; margin: 20px 0; padding: 15px; border-left: 3px solid #088178; background: #f3f7f4; }
+.payment-demo-notice > i { margin-top: 2px; color: #088178; }
+.payment-demo-notice p { margin: 0; color: #465b52; font-size: 12px; line-height: 1.65; }
+.payment-demo-notice strong { color: #1a1a1a; }
+.payment-submit { display: flex; width: 100%; align-items: center; justify-content: center; gap: 10px; padding: 14px 18px; border: 0; border-radius: 6px; background: #088178; color: #fff; font: inherit; font-size: 14px; font-weight: 700; cursor: pointer; }
+.payment-submit:hover:not(:disabled) { background: #066b64; }
+.payment-submit:disabled { background: #9baaa3; cursor: not-allowed; }
+.payment-status { display: none; margin: 13px 0 0; padding: 12px 14px; border: 1px solid #cce7d0; border-radius: 6px; background: #f3f7f4; color: #465b52; font-size: 12px; line-height: 1.6; }
+.payment-status.is-visible { display: block; }
+
+.payment-summary h2 { margin-bottom: 19px; }
+.payment-summary-row, .payment-summary-total { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 0; border-bottom: 1px solid #e5ebe7; color: #465b52; font-size: 13px; }
+.payment-summary-row strong { color: #1a1a1a; font-weight: 600; }
+.payment-summary-row .payment-free { color: #088178; }
+.payment-summary-total { margin-top: 4px; border: 0; color: #1a1a1a; font-size: 15px; }
+.payment-summary-total strong { color: #088178; font-size: 20px; }
+.payment-edit-cart { display: inline-block; margin-top: 13px; color: #465b52; font-size: 12px; font-weight: 600; text-decoration: none; }
+
+@media (max-width: 760px) {
+    .payment-page { padding: 36px 28px 58px; }
+    .payment-layout { grid-template-columns: 1fr; gap: 18px; }
+    .payment-summary { order: -1; }
+}
+
+@media (max-width: 560px) {
+    .payment-page { padding: 25px 18px 42px; }
+    .payment-heading { margin-bottom: 22px; }
+    .payment-back { margin-bottom: 20px; }
+    .payment-heading h1 { font-size: 29px; }
+    .payment-heading p { font-size: 14px; }
+    .payment-panel, .payment-summary { padding: 20px; }
+    .payment-option { padding: 13px 11px; gap: 10px; }
+    .payment-option-copy small { font-size: 11px; }
+}
