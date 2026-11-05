@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Ana's Storefront
 
 Ana's is a static fashion storefront built with HTML, CSS, and vanilla JavaScript. It includes a home page, product listings, a product detail page, a browser-based shopping cart, and store information pages.
@@ -60,3 +61,7 @@ The Contact form does not submit to a server. Real orders, payment processing, a
 ## External resources
 
 The pages load Font Awesome icons from cdnjs, and the shared stylesheet imports Google Fonts. Those resources require an internet connection; locally stored page and image assets do not.
+=======
+# Ana-s-fashion
+Ana’s is a responsive fashion e-commerce storefront built using HTML, CSS, and vanilla JavaScript. It features product listings, promotional banners, new arrivals, product details, and a shopping cart with browser localStorage integration.
+>>>>>>> 3eb6ecb13ca0fe441a15fb53860967357de87520
